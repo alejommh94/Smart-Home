@@ -1,11 +1,13 @@
 🏠 Smart Home Dashboard
 Interfaz moderna y responsive para la gestión de un hogar inteligente.
 Incluye widgets dinámicos para temperatura, energía, luces, seguridad, cámaras, ventanas, música y piscina.
+
 🚀 Características principales
 🔥 Diseño moderno y futurista
 - Estilo dark mode con efectos glow azul
 - Widgets con imágenes personalizadas en PNG con fondo transparente
 - Layout limpio y adaptable a cualquier pantalla
+
 🧩 Widgets incluidos
 - 🌡️ Temperatura — Estado térmico, humedad y sensación
 - ⚡ Energía — Consumo actual y comparativa diaria
@@ -15,10 +17,10 @@ Incluye widgets dinámicos para temperatura, energía, luces, seguridad, cámara
 - 🚪 Ventanas — Control de aperturas y alertas
 - 🎵 Música — Controles multimedia y pista actual
 - 🏊 Piscina — Temperatura, pH, cloro y estado del filtro
+
 🛠️ Tecnologías utilizadas
 - HTML
 - CSS
-- Diseño responsive
 - Imágenes PNG personalizadas
 
 📦 Cómo usarlo
