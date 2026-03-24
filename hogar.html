@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Home</title>
+  
+  <link rel="stylesheet" href="StyleHogar.css">
+</head>
+<body>
+
+  <!-- TOGGLE DARK MODE -->
+  <label class="switch" aria-label="Cambiar tema">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider">
+      <span class="slider-icon slider-icon--sun"></span>
+      <span class="slider-icon slider-icon--moon"></span>
+    </span>
+  </label>
+
+  <!-- HERO HEADER -->
+  <header class="header">
+    <div class="header__overlay"></div>
+    <div class="header__content container">
+      <div class="header__badge">SMART HOME</div>
+      <h1 class="header__title">Smart<br><span class="header__title--accent">Home</span></h1>
+      <p class="header__subtitle">Todo bajo control desde un solo lugar</p>
+      <div class="header__stats">
+        <div class="stat">
+          <span class="stat__value">8</span>
+          <span class="stat__label">Dispositivos</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__value">3</span>
+          <span class="stat__label">Alertas</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__value">98%</span>
+          <span class="stat__label">Online</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV TABS -->
+  <nav class="tabs container">
+    <button class="tab tab--active">General</button>
+    <button class="tab">Seguridad</button>
+    <button class="tab">Energía</button>
+    <button class="tab">Clima</button>
+  </nav>
+
+  <!-- DASHBOARD PRINCIPAL -->
+<main class="main container">
+  <section class="section">
+    <h2 class="section__title">Estado Actual</h2>
+    <div class="dashboard">
+
+      <!-- TEMPERATURA con imagen de fondo -->
+      <div class="widget widget--temp widget--has-img">
+        <div class="widget__img-wrap">
+          <img src="Resources/tempe.png" alt="Temperatura" class="widget__img" />
+          <div class="widget__img-overlay"></div>
+        </div>
+        <div class="widget__body">
+          <div class="widget__header">
+            <span class="widget__icon">🌡️</span>
+            <span class="widget__status widget__status--ok">●&nbsp;Normal</span>
+          </div>
+          <h3 class="widget__title">Temperatura</h3>
+          <div class="widget__value">22<span class="widget__unit">°C</span></div>
+          <div class="widget__bar">
+            <div class="widget__bar-fill" style="--fill: 55%"></div>
+          </div>
+          <p class="widget__meta">Sensación: 21°C · Humedad: 48%</p>
+        </div>
+      </div>
+
+      <!-- ENERGÍA con imagen de fondo -->
+      <div class="widget widget--energia widget--has-img">
+        <div class="widget__img-wrap">
+          <img src="Resources/energia.png" alt="Energía" class="widget__img" />
+          <div class="widget__img-overlay"></div>
+        </div>
+        <div class="widget__body">
+          <div class="widget__header">
+            <span class="widget__icon">⚡</span>
+            <span class="widget__status widget__status--warn">●&nbsp;Alto</span>
+          </div>
+          <h3 class="widget__title">Energía</h3>
+          <div class="widget__value">1.5<span class="widget__unit">kW</span></div>
+          <div class="widget__bar">
+            <div class="widget__bar-fill widget__bar-fill--warn" style="--fill: 72%"></div>
+          </div>
+          <p class="widget__meta">Hoy: 12.3 kWh · Ayer: 10.8 kWh</p>
+        </div>
+      </div>
+
+      <!-- LUCES con imagen de fondo -->
+<div class="widget widget--lights widget--has-img">
+  <div class="widget__img-wrap">
+    <img src="Resources/luces.png" alt="Luces" class="widget__img" />
+    <div class="widget__img-overlay"></div>
+  </div>
+  <div class="widget__body">
+    <div class="widget__header">
+      <span class="widget__icon">💡</span>
+      <span class="widget__status widget__status--ok">●&nbsp;Activas</span>
+    </div>
+    <h3 class="widget__title">Luces</h3>
+    <div class="widget__value">3<span class="widget__unit">/8</span></div>
+    <div class="lights-grid">
+   
+    </div>
+  </div>
+</div>
+
+<!-- SEGURIDAD con imagen de fondo -->
+<div class="widget widget--security widget--has-img">
+  <div class="widget__img-wrap">
+    <img src="Resources/seguridad.png" alt="Seguridad" class="widget__img" />
+    <div class="widget__img-overlay"></div>
+  </div>
+  <div class="widget__body">
+    <div class="widget__header">
+      <span class="widget__icon">🔒</span>
+      <span class="widget__status widget__status--ok">●&nbsp;Seguro</span>
+    </div>
+    <h3 class="widget__title">Seguridad</h3>
+    <div class="widget__value security-badge">OK</div>
+    <ul class="security-list">
+      <li class="security-item security-item--ok">✔ Puerta principal cerrada</li>
+      <li class="security-item security-item--ok">✔ Alarma activada</li>
+      <li class="security-item security-item--warn">⚠ 3 Ventanas abiertas </li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- MÚSICA con imagen de fondo -->
+<div class="widget widget--music widget--has-img">
+  <div class="widget__img-wrap">
+    <img src="Resources/musica.png" alt="Música" class="widget__img" />
+    <div class="widget__img-overlay"></div>
+  </div>
+  <div class="widget__body">
+    <div class="widget__header">
+      <span class="widget__icon">🎵</span>
+      <span class="widget__status widget__status--ok">●&nbsp;Play</span>
+  </div>
+    <h3 class="widget__title">Música</h3>
+    <p class="music-track">Salsa-Baul VAYALO Mix</p>
+    <div class="music-controls">
+      <button class="music-btn">⏮</button>
+      <button class="music-btn music-btn--play">⏸</button>
+      <button class="music-btn">⏭</button>
+    </div>
+    <div class="widget__bar">
+      <div class="widget__bar-fill" style="--fill: 40%"></div>
+    </div>
+    <p class="widget__meta">3 canciones en cola · Vol 65%</p>
+  </div>
+</div>
+
+<!-- PISCINA con imagen de fondo -->
+<div class="widget widget--pool widget--has-img">
+  <div class="widget__img-wrap">
+    <img src="Resources/piscina.png" alt="Piscina" class="widget__img" />
+    <div class="widget__img-overlay"></div>
+  </div>
+  <div class="widget__body">
+    <div class="widget__header">
+      <span class="widget__icon">🏊</span>
+      <span class="widget__status widget__status--ok">●&nbsp;Ideal</span>
+    </div>
+    <h3 class="widget__title">Piscina</h3>
+    <div class="widget__value">25<span class="widget__unit">°C</span></div>
+    <div class="widget__bar">
+      <div class="widget__bar-fill" style="--fill: 62%"></div>
+    </div>
+    <p class="widget__meta">pH: 7.4 · Cloro: OK · Filtro: ON</p>
+  </div>
+</div>
+  </section>
+</main>
+
+    <!-- SECCIÓN ACCESOS RÁPIDOS -->
+    <section class="section">
+      <h2 class="section__title">Accesos Rápidos</h2>
+      <div class="quick-grid">
+        <button class="quick-btn">
+          <span>🔔</span>
+          <span>Alertas</span>
+        </button>
+        <button class="quick-btn">
+          <span>📅</span>
+          <span>Rutinas</span>
+        </button>
+        <button class="quick-btn">
+          <span>🌤️</span>
+          <span>Clima</span>
+        </button>
+        <button class="quick-btn quick-btn--alert">
+          <span>🚨</span>
+          <span>Emergencia</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer container">
+    <p>Smart Home &copy; 2026 · se avanzo desde la granja de martin o no ?: hace 2 min</p>
+  </footer>
+
+  <script>
+    // DARK MODE TOGGLE
+    const toggle = document.getElementById("theme-toggle");
+    const saved = localStorage.getItem("theme");
+    if (saved) {
+      document.documentElement.setAttribute("data-theme", saved);
+      toggle.checked = saved === "dark";
+    }
+    toggle.addEventListener("change", () => {
+      const next = toggle.checked ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+
+    // TAB NAVIGATION
+    document.querySelectorAll(".tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("tab--active"));
+        tab.classList.add("tab--active");
+      });
+    });
+  </script>
+</body>
+</html>
